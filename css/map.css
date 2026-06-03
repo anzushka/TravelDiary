@@ -1,0 +1,138 @@
+.land {
+    cursor: pointer;
+    transition: fill 0.2s ease;
+}
+
+.land:hover {
+    fill: #e6e6e6;
+}
+
+.land.selected {
+    fill: #b5b5b5;
+}
+
+#main {
+    display: flex;
+    margin-top: 50px;
+    min-height: calc(100vh - 50px);
+}
+
+#map,
+#entry {
+    width: 50%;
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#entry {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    color: #b5b5b5;
+    font-family: "Courier New", monospace;
+    text-align: center;
+}
+
+#entry-header {
+    padding-top: 20px;
+}
+
+#prefecture-name {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+#memory-meta {
+    line-height: 1.8;
+}
+
+.rating {
+    letter-spacing: 4px;
+}
+
+#memory-container {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#entry-footer {
+    padding-bottom: 100px;
+}
+
+#memory-navigation {
+    margin-bottom: 20px;
+}
+
+#memory-navigation button,
+#addMemory {
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: #b5b5b5;
+    cursor: pointer;
+}
+
+#memory-navigation button:hover,
+#addMemory:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-entry-modal {
+    width: 350px;
+    padding: 30px;
+    background: #f4f1ea;
+    font-family: "Courier New", monospace;
+    text-align: center;
+}
+
+#add-entry-modal input,
+#add-entry-modal textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+#add-entry-modal textarea {
+    height: 120px;
+}
+
+#modal-buttons button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#modal-buttons button:hover {
+    text-decoration: underline;
+}

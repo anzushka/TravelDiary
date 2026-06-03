@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title></title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="about.html">About</a>
+        <a href="library.html">Library</a>
+        <a href="stats.html">Stats</a>
+    </nav>
+</header>
+<div id="library-main">
+
+    <div id="entry-list">
+        <h1>Library</h1>
+        <div id="library-list"></div>
+    </div>
+
+    <div id="entry-preview">
+        <h1 id="preview-prefecture">Select an entry</h1>
+
+        <div id="preview-meta">
+            <p>No memory selected.</p>
+        </div>
+
+        <div id="preview-notes"></div>
+    </div>
+
+</div>
+<div id="edit-modal-overlay" class="hidden">
+    <div id="edit-entry-modal">
+        <h2>Edit Memory</h2>
+
+        <input id="edit-city-input" type="text">
+        <input id="edit-date-input" type="date">
+        <input id="edit-rating-input" type="number" min="1" max="5">
+        <textarea id="edit-notes-input"></textarea>
+
+        <div id="edit-modal-buttons">
+            <button id="save-edit">save</button>
+            <button id="cancel-edit">cancel</button>
+        </div>
+    </div>
+</div>
+<script src="../library.js"></script>
+</body>
+</html>

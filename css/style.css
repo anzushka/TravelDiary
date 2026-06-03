@@ -1,0 +1,203 @@
+body {
+    background-color: #2d2d2d;
+}
+
+header {
+    font-family: "Courier New", monospace;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #2d2d2d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+#library-main {
+    display: flex;
+    margin-top: 50px;
+    min-height: calc(100vh - 50px);
+    font-family: "Courier New", monospace;
+}
+
+#entry-list,
+#entry-preview {
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+#entry-list {
+    border-right: 1px solid #2d2d2d;
+    color: #b5b5b5;
+    overflow-y: auto;
+}
+
+#entry-preview {
+    display: flex;
+    color: #b5b5b5;
+    flex-direction: column;
+    text-align: center;
+}
+
+.prefecture-group {
+    margin-bottom: 35px;
+}
+
+.prefecture-group h2 {
+    font-weight: normal;
+    color: #b5b5b5;
+    margin-bottom: 10px;
+}
+
+.library-entry {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.library-entry span {
+    cursor: pointer;
+    color: #b5b5b5;
+}
+
+.library-entry span:hover,
+.library-entry button:hover {
+    text-decoration: underline;
+}
+
+.library-entry button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: #b5b5b5;
+    cursor: pointer;
+}
+
+#preview-prefecture {
+    margin-top: 80px;
+    color: #b5b5b5;
+    font-weight: normal;
+}
+
+#preview-meta {
+    margin-top: 40px;
+    color: #b5b5b5;
+    line-height: 1.8;
+}
+
+#preview-notes {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#edit-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-entry-modal {
+    width: 350px;
+    padding: 30px;
+    background: #f4f1ea;
+    font-family: "Courier New", monospace;
+    text-align: center;
+}
+
+#edit-entry-modal input,
+#edit-entry-modal textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+#edit-entry-modal textarea {
+    height: 120px;
+}
+
+#edit-modal-buttons button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#edit-modal-buttons button:hover {
+    text-decoration: underline;
+}
+
+#stats-main {
+    margin-top: 50px;
+    padding: 60px;
+
+    text-align: center;
+    font-family: "Courier New", monospace;
+    color: #b5b5b5;
+    line-height: 2.5;
+}
+
+#home-main,
+#about-main {
+    margin-top: 50px;
+    min-height: calc(100vh - 50px);
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    text-align: center;
+    font-family: "Courier New", monospace;
+    color: #b5b5b5;
+    line-height: 2;
+}
+
+#home-main p,
+#about-main p {
+    color: #b5b5b5;
+    max-width: 1000px;
+}
+
+#start-button {
+    margin-top: 40px;
+    color: #b5b5b5;
+    text-decoration: none;
+}
+
+#start-button:hover {
+    text-decoration: underline;
+}
+
+#about-main h2 {
+    margin-top: 50px;
+    font-weight: normal;
+}
