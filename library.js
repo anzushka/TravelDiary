@@ -15,6 +15,9 @@ let editingEntryIndex = null;
 
 let memories = JSON.parse(localStorage.getItem("memories")) || {};
 
+const prefectureNames =
+    JSON.parse(localStorage.getItem("prefectureNames")) || {};
+
 function renderLibrary() {
     libraryList.innerHTML = "";
 
@@ -26,7 +29,11 @@ function renderLibrary() {
         const group = document.createElement("div");
         group.classList.add("prefecture-group");
 
-        group.innerHTML = `<h2>${prefectureId}</h2>`;
+        group.innerHTML = `
+            <h2>
+                ${prefectureNames[prefectureId] || prefectureId}
+            </h2>
+        `;
 
         entries.forEach((entry, index) => {
             const entryRow = document.createElement("div");

@@ -21,33 +21,12 @@ const memoryContainer = document.getElementById("memory-container");
 let currentPrefectureId = null;
 let currentMemoryIndex = 0;
 
-const memories = {
-    "JP-34": [
-        {
-            city: "Miyajima",
-            date: "2026/03/03",
-            rating: 5,
-            notes: "Beautiful shrine."
-        },
-        {
-            city: "Iwakuni",
-            date: "2026/03/02",
-            rating: 4,
-            notes: "Kintaikyo Bridge."
-        },
-        {
-            city: "Hiroshima",
-            date: "2026/03/01",
-            rating: 5,
-            notes: "Peace Memorial Museum."
-        }
-    ]
-};
+let memories = {};
 
 const savedMemories = localStorage.getItem("memories");
 
 if (savedMemories) {
-    Object.assign(memories, JSON.parse(savedMemories));
+    memories = JSON.parse(savedMemories);
 }
 
 prefectures.forEach((prefecture) => {
